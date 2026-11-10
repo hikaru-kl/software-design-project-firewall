@@ -1,0 +1,320 @@
+<mxfile host="app.diagrams.net" agent="Claude" pages="3">
+  <diagram id="ptaf" name="1 — PT Application Firewall">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#222222;strokeWidth=1.5;verticalAlign=top;align=left;spacingTop=8;spacingLeft=10;fontSize=15;fontStyle=1;" value="PT Application Firewall" vertex="1">
+          <mxGeometry height="660" width="1030" x="290" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" value="Администратор&lt;br&gt;безопасности" vertex="1">
+          <mxGeometry height="80" width="40" x="120" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="web" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" value="Защищаемое&lt;br&gt;веб-приложение" vertex="1">
+          <mxGeometry height="80" width="40" x="120" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="siem" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" value="SIEM-система" vertex="1">
+          <mxGeometry height="80" width="40" x="1420" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="a9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Настраивать защиту&lt;br&gt;веб-приложения" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Блокировать&lt;br&gt;вредоносные запросы" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Обнаруживать атаки&lt;br&gt;уровня приложений" vertex="1">
+          <mxGeometry height="64" width="230" x="1060" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Анализировать&lt;br&gt;веб-трафик" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="358" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Обнаруживать&lt;br&gt;атаки" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="358" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Обнаруживать&lt;br&gt;вредоносных ботов" vertex="1">
+          <mxGeometry height="64" width="230" x="1060" y="358" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Проверять&lt;br&gt;передаваемые файлы" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="a7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Применять&lt;br&gt;виртуальные патчи" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Передавать события&lt;br&gt;безопасности" vertex="1">
+          <mxGeometry height="64" width="230" x="1060" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacingLeft=8;spacingRight=8;" value="Проверка файлов и виртуальный патчинг могут зависеть от модулей и конфигурации продукта." vertex="1">
+          <mxGeometry height="44" width="970" x="320" y="622" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="web" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="admin" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" target="a9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="siem" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" target="a8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="a1" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a2" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ex1" edge="1" parent="1" source="a3" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a2" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ex2" edge="1" parent="1" source="a4" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a2" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ex3" edge="1" parent="1" source="a5" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a2" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ex4" edge="1" parent="1" source="a7" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a2" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ex5" edge="1" parent="1" source="a8" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a2" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ex6" edge="1" parent="1" source="a6" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="a1" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" edge="1" parent="1" source="note" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;dashPattern=2 3;endArrow=none;strokeColor=#8a7a2e;strokeWidth=1;exitX=0.1186;exitY=0;exitDx=0;exitDy=0;" target="a6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" edge="1" parent="1" source="note" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;dashPattern=2 3;endArrow=none;strokeColor=#8a7a2e;strokeWidth=1;exitX=0.5000;exitY=0;exitDx=0;exitDy=0;" target="a7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ug" name="2 — UserGate WAF">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" value="UserGate WAF" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#222222;strokeWidth=1.5;verticalAlign=top;align=left;spacingTop=8;spacingLeft=10;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="40" width="1030" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="client" value="Клиент" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="app" value="Веб-приложение" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="120" y="250" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="Администратор" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="330" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="logsrv" value="Удалённый сервер&lt;br&gt;журналов" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="570" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="u1" value="Обрабатывать&lt;br&gt;HTTP/HTTPS-запросы" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="320" y="98" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" value="Анализировать&lt;br&gt;трафик" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="98" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" value="Применять правила&lt;br&gt;безопасности" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="320" y="218" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u4" value="Блокировать&lt;br&gt;опасный запрос" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="218" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u9" value="Сохранять события&lt;br&gt;в журнал" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="320" y="338" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u5" value="Модифицировать&lt;br&gt;трафик" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="338" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u7" value="Использовать группы&lt;br&gt;объектов в правилах" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="690" y="458" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u12" value="Публиковать внутренние&lt;br&gt;веб-сервисы" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="98" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u8" value="Просматривать&lt;br&gt;срабатывания правил" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="218" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u11" value="Диагностировать&lt;br&gt;сеть" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="338" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" value="Создавать и изменять&lt;br&gt;правила UPL" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="458" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="u10" value="Экспортировать&lt;br&gt;журналы" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="578" width="230" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="ua1" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="client" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua2" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="app" target="u1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua3" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="admin" target="u12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua4" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="admin" target="u8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua5" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="admin" target="u11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua6" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="admin" target="u6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua7" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="admin" target="u10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ua8" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" edge="1" parent="1" source="logsrv" target="u10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui1" value="&lt;&lt;include&gt;&gt;" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="u1" target="u2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui2" value="&lt;&lt;include&gt;&gt;" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="u1" target="u3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ui3" value="&lt;&lt;include&gt;&gt;" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="u3" target="u9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ue1" value="&lt;&lt;extend&gt;&gt;" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="u4" target="u3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ue2" value="&lt;&lt;extend&gt;&gt;" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="u5" target="u3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ue3" value="&lt;&lt;extend&gt;&gt;" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="u7" target="u6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="own" name="3 — Собственная система">
+    <mxGraphModel dx="2131" dy="1147" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#222222;strokeWidth=1.5;verticalAlign=top;align=left;spacingTop=8;spacingLeft=10;fontSize=15;fontStyle=1;" value="Система фильтрации сетевого трафика" vertex="1">
+          <mxGeometry height="1110" width="1030" x="290" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="Администратор" vertex="1">
+          <mxGeometry height="80" width="40" x="190" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="staff" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="Сотрудник&lt;br&gt;безопасности" vertex="1">
+          <mxGeometry height="80" width="40" x="190" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="analyst" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="Аналитик&lt;br&gt;безопасности" vertex="1">
+          <mxGeometry height="80" width="40" x="190" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="traffic" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" value="Источник сетевого&lt;br&gt;трафика" vertex="1">
+          <mxGeometry height="80" width="40" x="1420" y="866" as="geometry" />
+        </mxCell>
+        <mxCell id="siem" parent="1" style="shape=umlActor;html=1;outlineConnect=0;fontSize=12;verticalLabelPosition=bottom;verticalAlign=top;" value="Внешняя&lt;br&gt;SIEM-система" vertex="1">
+          <mxGeometry height="80" width="40" x="1420" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Создавать политику" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Изменять политику" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Назначать политику&lt;br&gt;подсистеме" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Управлять политиками&lt;br&gt;фильтрации" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Добавлять правило" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Изменять или удалять&lt;br&gt;правило" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Управлять правилами&lt;br&gt;фильтрации" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="468" as="geometry" />
+        </mxCell>
+        <mxCell id="j1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Просматривать журнал&lt;br&gt;событий" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="j2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Экспортировать&lt;br&gt;события" vertex="1">
+          <mxGeometry height="64" width="230" x="1060" y="638" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Применять действие&lt;br&gt;по умолчанию" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Разрешать пакет" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Блокировать пакет" vertex="1">
+          <mxGeometry height="64" width="230" x="320" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Обрабатывать&lt;br&gt;сетевой пакет" vertex="1">
+          <mxGeometry height="64" width="230" x="690" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Проверять пакет&lt;br&gt;по правилам" vertex="1">
+          <mxGeometry height="64" width="230" x="1060" y="778" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;fontSize=12;align=center;spacingLeft=8;spacingRight=8;" value="Записывать результат&lt;br&gt;в журнал" vertex="1">
+          <mxGeometry height="64" width="230" x="1060" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;spacingLeft=8;spacingRight=8;" value="Условия: правило не найдено → действие по умолчанию; ALLOW → разрешить; DROP → заблокировать. Изменение/удаление правила — дополнительные сценарии." vertex="1">
+          <mxGeometry height="44" width="970" x="320" y="1082" as="geometry" />
+        </mxCell>
+        <mxCell id="g1" edge="1" parent="1" source="admin" style="rounded=0;html=1;strokeWidth=1.2;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" target="staff">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g2" edge="1" parent="1" source="analyst" style="rounded=0;html=1;strokeWidth=1.2;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" target="staff">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oa1" edge="1" parent="1" source="staff" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oa2" edge="1" parent="1" source="staff" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" target="r1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oa3" edge="1" parent="1" source="traffic" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" target="t1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oa4" edge="1" parent="1" source="analyst" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=1;exitY=0.4;exitDx=0;exitDy=0;" target="j1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oa5" edge="1" parent="1" source="siem" style="rounded=0;html=1;strokeWidth=1.2;endArrow=none;exitX=0;exitY=0.4;exitDx=0;exitDy=0;" target="j2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogp1" edge="1" parent="1" source="p2" style="rounded=0;html=1;strokeWidth=1.2;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogp2" edge="1" parent="1" source="p3" style="rounded=0;html=1;strokeWidth=1.2;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogp3" edge="1" parent="1" source="p4" style="rounded=0;html=1;strokeWidth=1.2;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" target="p1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogr1" edge="1" parent="1" source="r2" style="rounded=0;html=1;strokeWidth=1.2;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;" target="r1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe5" edge="1" parent="1" source="r3" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="r1" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oi5" edge="1" parent="1" source="t1" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="t2" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oi6" edge="1" parent="1" source="t1" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="t6" value="&lt;&lt;include&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe1" edge="1" parent="1" source="t3" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="t1" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe2" edge="1" parent="1" source="t4" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="t1" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe3" edge="1" parent="1" source="t5" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="t1" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oe4" edge="1" parent="1" source="j2" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;endArrow=open;endFill=0;endSize=8;fontSize=11;labelBackgroundColor=#ffffff;" target="j1" value="&lt;&lt;extend&gt;&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" edge="1" parent="1" source="note" style="rounded=0;html=1;strokeWidth=1.2;dashed=1;dashPattern=2 3;endArrow=none;strokeColor=#8a7a2e;strokeWidth=1;exitX=0.5000;exitY=0;exitDx=0;exitDy=0;" target="t1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

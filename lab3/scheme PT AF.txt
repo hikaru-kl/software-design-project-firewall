@@ -1,0 +1,33 @@
+
+@startuml
+left to right direction
+
+actor "Администратор\nбезопасности" as Admin
+actor "Веб-приложение" as WebApp
+actor "SIEM-система" as SIEM
+
+rectangle "PT Application Firewall" {
+  usecase "Анализировать\nвеб-трафик" as UC1
+  usecase "Обнаруживать\nатаки" as UC2
+  usecase "Блокировать\nвредоносные запросы" as UC3
+  usecase "Обнаруживать атаки\nL7 и DDoS" as UC4
+  usecase "Обнаруживать\nвредоносных ботов" as UC5
+  usecase "Проверять\nпередаваемые файлы" as UC6
+  usecase "Применять\nвиртуальные патчи" as UC7
+  usecase "Передавать события\nбезопасности" as UC8
+  usecase "Настраивать\nзащиту приложения" as UC9
+}
+
+WebApp --> UC1
+Admin --> UC9
+SIEM --> UC8
+
+UC1 ..> UC2 : <<include>>
+UC3 ..> UC2 : <<extend>>
+UC4 ..> UC2 : <<extend>>
+UC5 ..> UC2 : <<extend>>
+UC6 ..> UC1 : <<extend>>
+UC7 ..> UC2 : <<extend>>
+UC8 ..> UC2 : <<extend>>
+
+@enduml

@@ -1,0 +1,6 @@
+1. PT Application Firewall:
+- Страница продукта PT AF. (https://www.pt.axoftglobal.com/ptaf)
+- Официальная брошюра PT AF (PDF). (https://www.ptsecurity.com/upload/corporate/ru-ru/products/af/PT_AF-3_PB.pdf)
+2. UserGate WAF:
+- Страница продукта UserGate WAF. (https://usergate.com/products/web-application-firewall?utm_source=chatgpt.com)
+- Официальная документация UserGate WAF. (https://docs.usergate.com/obshie-svedeniya_2054.html?utm_source=chatgpt.com)

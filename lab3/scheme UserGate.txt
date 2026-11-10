@@ -1,0 +1,41 @@
+
+@startuml
+left to right direction
+
+actor "Администратор" as Admin
+actor "Клиент" as Client
+actor "Веб-приложение" as WebApp
+actor "Удалённый сервер\nжурналов" as LogServer
+
+rectangle "UserGate WAF" {
+  usecase "Обрабатывать\nHTTP/HTTPS-запросы" as UC1
+  usecase "Анализировать\nтрафик" as UC2
+  usecase "Применять\nправила безопасности" as UC3
+  usecase "Блокировать\nопасный запрос" as UC4
+  usecase "Модифицировать\nтрафик" as UC5
+  usecase "Создавать и изменять\nправила UPL" as UC6
+  usecase "Использовать группы\nобъектов в правилах" as UC7
+  usecase "Просматривать\nсрабатывания правил" as UC8
+  usecase "Сохранять события\nв журнал" as UC9
+  usecase "Экспортировать\nжурналы" as UC10
+  usecase "Выполнять диагностику\nсети" as UC11
+  usecase "Публиковать внутренние\nвеб-сервисы" as UC12
+}
+
+Client --> UC1
+UC1 --> WebApp
+Admin --> UC6
+Admin --> UC8
+Admin --> UC10
+Admin --> UC11
+Admin --> UC12
+LogServer --> UC10
+
+UC1 ..> UC2 : <<include>>
+UC1 ..> UC3 : <<include>>
+UC4 ..> UC3 : <<extend>>
+UC5 ..> UC3 : <<extend>>
+UC3 ..> UC9 : <<include>>
+UC7 ..> UC6 : <<extend>>
+
+@enduml
