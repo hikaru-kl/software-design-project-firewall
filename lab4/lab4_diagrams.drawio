@@ -1,0 +1,243 @@
+<mxfile host="Electron" agent="Claude" pages="3">
+  <diagram id="pkg" name="1 — Диаграмма пакетов">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="940" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ns" parent="1" style="shape=folder;tabWidth=120;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=none;strokeColor=#222222;strokeWidth=1.2;align=left;verticalAlign=top;spacingTop=22;spacingLeft=10;fontSize=12;" value="&lt;b&gt;TrafficFilter&lt;/b&gt;" vertex="1">
+          <mxGeometry height="900" width="1060" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p_adm" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Administration&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ Administrator&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="230" x="55" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p_proc" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Processing&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ PacketFilteringService&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="230" x="325" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p_exp" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;dashed=1;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Export&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ EventExporter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="230" x="785" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p_act" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Actions&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ IPacketAction&lt;br&gt;+ AllowAction&lt;br&gt;+ DropAction&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="230" x="525" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p_jrn" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Journal&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ FilterJournal&lt;br&gt;+ FilterResult&lt;br&gt;+ LogEntry&lt;/div&gt;" vertex="1">
+          <mxGeometry height="108" width="230" x="785" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="p_cfg" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Configuration&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ FilterPolicy&lt;br&gt;+ FilterRule&lt;br&gt;+ FilteringSubsystem&lt;br&gt;+ FilterActionKind&lt;/div&gt;" vertex="1">
+          <mxGeometry height="124" width="230" x="255" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="p_trf" parent="1" style="shape=folder;tabWidth=90;tabHeight=18;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=22;spacingLeft=6;fontSize=12;" value="&lt;b&gt;Traffic&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ NetworkPacket&lt;br&gt;+ TrafficFlow&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="230" x="525" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="n_leg" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=6;fontSize=11;" value="Условные обозначения.&lt;br&gt;Пунктирная стрелка с открытым наконечником — зависимость использования «use»: от зависимого пакета к тому, от которого он зависит.&lt;br&gt;«+» — открытый (public) элемент.&lt;br&gt;Пунктирная рамка — проектируемый пакет (в TrafficFilter.cs не реализован)." vertex="1">
+          <mxGeometry height="180" width="215" x="40" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="p_adm" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_cfg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="p_proc" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_act" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="p_proc" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_cfg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="p_proc" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_trf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="p_act" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_cfg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="p_act" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_trf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="p_jrn" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_cfg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="p_jrn" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_trf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="p_exp" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_jrn" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="p_cfg" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_trf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="p_proc" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="p_jrn" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="cmp" name="2 — Диаграмма компонентов">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="880" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x_ts" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«external system»&lt;br&gt;&lt;b&gt;TrafficSource&lt;/b&gt;" vertex="1">
+          <mxGeometry height="52" width="210" x="445" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="i_filter" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«interface»&lt;br&gt;&lt;b&gt;IPacketFiltering&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ FilterPacket(packet, subsystem):&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FilterResult&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="250" x="425" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="x_siem" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«external system»&lt;br&gt;&lt;b&gt;SIEM&lt;/b&gt;" vertex="1">
+          <mxGeometry height="52" width="210" x="800" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="i_siem" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«interface»&lt;br&gt;&lt;b&gt;ISiemReceiver&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ SendEvents(entries)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="230" x="790" y="94" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#222222;strokeWidth=1.5;align=left;verticalAlign=top;spacingTop=4;spacingLeft=10;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;TrafficFilter&lt;/b&gt;" vertex="1">
+          <mxGeometry height="625" width="1040" x="30" y="235" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_ic" parent="sys" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="1012" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="c_adm" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;Administration&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;Administrator&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="210" x="65" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="c_adm_ic" parent="c_adm" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="182" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fs" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;FilteringService&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;PacketFilteringService&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="210" x="445" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="c_fs_ic" parent="c_fs" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="182" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="c_exp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;dashed=1;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;EventExporter&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;EventExporter&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="210" x="825" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="c_exp_ic" parent="c_exp" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="182" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="i_assign" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«interface»&lt;br&gt;&lt;b&gt;IPolicyAssignment&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ AssignPolicy(policy): bool&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="210" x="45" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="i_active" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«interface»&lt;br&gt;&lt;b&gt;IActivePolicy&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ GetActivePolicy():&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FilterPolicy&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="210" x="280" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="i_action" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«interface»&lt;br&gt;&lt;b&gt;IPacketAction&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ Execute(packet):&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;FilterActionKind&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="210" x="520" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="i_journal" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«interface»&lt;br&gt;&lt;b&gt;IEventJournal&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;+ RecordResult(packet, subsystem,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;rule, decision, reason): FilterResult&lt;br&gt;+ Find(criteria):&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;IReadOnlyList&amp;lt;LogEntry&amp;gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="124" width="270" x="770" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c_act" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;PacketActions&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;AllowAction, DropAction&lt;/div&gt;" vertex="1">
+          <mxGeometry height="76" width="210" x="520" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="c_act_ic" parent="c_act" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="182" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="c_jrn" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;EventJournal&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;FilterJournal, FilterResult,&lt;br&gt;LogEntry&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="230" x="790" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="c_jrn_ic" parent="c_jrn" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="202" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="c_core" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«component»&lt;br&gt;&lt;b&gt;FilteringCore&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;NetworkPacket, TrafficFlow, FilterActionKind,&lt;br&gt;FilterPolicy, FilterRule, FilteringSubsystem&lt;/div&gt;" vertex="1">
+          <mxGeometry height="92" width="610" x="290" y="745" as="geometry" />
+        </mxCell>
+        <mxCell id="c_core_ic" parent="c_core" style="shape=component;jettyWidth=8;jettyHeight=4;html=1;strokeColor=#222222;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="18" width="18" x="582" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="n_leg" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=6;fontSize=11;" value="Условные обозначения.&lt;br&gt;Пунктир с белым треугольником — реализация: компонент предоставляет интерфейс.&lt;br&gt;Пунктир с открытым наконечником — использование: компонент требует интерфейс или зависит от другого компонента.&lt;br&gt;Пунктирная рамка — проектируемый компонент (OWN-11)." vertex="1">
+          <mxGeometry height="180" width="225" x="45" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="x_ts" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_filter" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="c_fs" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=block;endFill=0;endSize=10;" target="i_filter" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="x_siem" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=block;endFill=0;endSize=10;" target="i_siem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="c_exp" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_siem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="c_adm" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_assign" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="c_core" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=block;endFill=0;endSize=10;" target="i_assign" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="c_fs" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_active" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="c_core" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=block;endFill=0;endSize=10;" target="i_active" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="c_fs" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_action" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="c_act" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=block;endFill=0;endSize=10;" target="i_action" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="c_fs" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_journal" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="c_exp" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="i_journal" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="c_jrn" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=block;endFill=0;endSize=10;" target="i_journal" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="c_act" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="c_core" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="c_jrn" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;dashed=1;endArrow=open;endFill=0;endSize=8;" target="c_core" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="dep" name="3 — Диаграмма развертывания">
+    <mxGraphModel dx="1116" dy="778" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="780" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d_ts" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«device»&lt;br&gt;&lt;b&gt;TrafficSource&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align:left&quot;&gt;Источник сетевого&lt;br&gt;трафика&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="180" x="20" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="d_srv" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«device»&lt;br&gt;&lt;b&gt;FilteringServer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="450" width="480" x="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e_net" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;.NET Runtime (.NET 5+)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="345" width="430" x="325" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="a_dll" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«artifact»&lt;br&gt;&lt;b&gt;TrafficFilter.dll&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;FilteringCore, FilteringService,&lt;br&gt;PacketActions, EventJournal,&lt;br&gt;Administration&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="360" x="350" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="a_exp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;dashed=1;align=center;verticalAlign=top;spacingTop=4;spacingLeft=0;fontSize=12;" value="«artifact»&lt;br&gt;&lt;b&gt;SiemExporter.dll&lt;/b&gt;&lt;hr size=&quot;1&quot; style=&quot;margin:3px 0&quot;&gt;&lt;div style=&quot;text-align:left&quot;&gt;EventExporter (проектируется, OWN-11)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="360" x="350" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="d_siem" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«device»&lt;br&gt;&lt;b&gt;SIEMServer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="200" x="890" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="e_siem" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;dashed=1;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;SIEM-платформа&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="902" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="d_ws" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;dashed=1;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«device»&lt;br&gt;&lt;b&gt;SecurityWorkstation&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="480" x="300" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ws" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=14;fillColor=#ffffff;strokeColor=#222222;strokeWidth=1.2;dashed=1;verticalAlign=top;align=center;spacingTop=2;fontSize=12;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Консоль управления&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="430" x="325" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="n_leg" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;spacing=6;fontSize=11;" value="Условные обозначения.&lt;br&gt;Куб — узел (device, executionEnvironment); прямоугольник «artifact» — развёртываемый файл; вложенность показывает размещение.&lt;br&gt;Пунктир — проектируемый элемент или внешняя система вне TrafficFilter.cs.&lt;br&gt;Протоколы — допущения." vertex="1">
+          <mxGeometry height="175" width="260" x="20" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="d_ts" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;endArrow=none;" target="d_srv" value="«TCP/IP»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="d_srv" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;endArrow=none;" target="d_siem" value="«Syslog/TLS»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="d_ws" style="rounded=0;html=1;strokeWidth=1.2;strokeColor=#222222;fontSize=11;endArrow=none;" target="d_srv" value="«HTTPS»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
